@@ -3,6 +3,12 @@
 BrainBin is a full-stack note-taking web application designed to help users create, manage, and organize personal notes efficiently.
 It focuses on clean UI, fast interactions, and a simple but scalable backend architecture.
 
+## 🌐 Live Demo
+
+Try the application here:
+👉 https://brainbin.onrender.com
+
+
 ✨ Features
 
 📝 Create, edit, and delete notes
@@ -40,6 +46,8 @@ MongoDB (Mongoose)
 
 Upstash Redis (rate limiting)
 
+Docker (backend containerization)
+
 dotenv
 
 CORS
@@ -73,9 +81,10 @@ npm install
 
 Create a .env file inside backend:
 
-PORT=5000
+PORT=5001
 MONGO_URI=your_mongodb_connection_string
-REDIS_URL=your_upstash_redis_url
+UPSTASH_REDIS_REST_URL=your_upstash_redis_url
+UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
 
 
 Start the backend server:
@@ -91,6 +100,29 @@ npm run dev
 The frontend will run on:
 
 http://localhost:5173
+
+## 🐳 Running with Docker
+
+The backend can also be run inside a Docker container.
+
+### Build the image
+
+```
+docker build -t brainbin-backend ./backend
+```
+
+### Run the container
+
+```
+docker run --env-file backend/.env -p 5001:5001 brainbin-backend
+```
+
+The API will be available at:
+
+```
+http://localhost:5001
+```
+
 
 🔗 API Overview
 

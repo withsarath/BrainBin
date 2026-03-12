@@ -162,7 +162,7 @@ Sarath
 Aspiring Full-Stack Developer
 Focused on building clean, functional, and scalable web applications.
 
-GitHub: https://github.com/Sarath-33
+GitHub: https://github.com/withsarath
 
 Portfolio: https://withsarath.vercel.app
 
